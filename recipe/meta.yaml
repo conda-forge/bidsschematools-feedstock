@@ -18,14 +18,15 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
     - setuptools
   run:
-    - python >=3.7
+    - python >=3.8
     - click
     - pyyaml
-    - importlib-resources
+    - importlib-resources  # [py<39]
+    - jsonschema
     - tabulate
     - pandas
     - pyparsing
