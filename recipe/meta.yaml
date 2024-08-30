@@ -1,5 +1,5 @@
 {% set name = "bidsschematools" %}
-{% set version = "0.11.0" %}
+{% set version = "0.11.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ba9b8406face17782f0aa5a48a84c4a161dc3497f498edae97c7c49d637ab71f
+  sha256: 363152bda64e911b414e08b4ea71cc5b7c0194809c9dcc0b8ac7b9b419c79339
 
 build:
   noarch: python
