@@ -1,12 +1,13 @@
 {% set name = "bidsschematools" %}
 {% set version = "0.11.3.post2" %}
+{% set python_min = "3.8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: a862144d548fb403e4a65c88bd3235ee30e05bba8961a2751cc684229cd65491
 
 build:
@@ -18,11 +19,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - click
     - pyyaml
     - importlib-resources
