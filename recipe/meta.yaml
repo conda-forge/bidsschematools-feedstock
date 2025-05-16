@@ -34,7 +34,7 @@ test:
   requires:
     - python {{ python_min }}
     - pip
-    - pytest
+    - jq
   source_files:
     - pyproject.toml
   imports:
@@ -42,6 +42,8 @@ test:
   commands:
     - pip check
     - bst --help
+    - bst export | jq '[.bids_version, .schema_version]'
+    - pip install "bidsschematools[tests]"
     - python -m pytest -vv --pyargs bidsschematools
 
 about:
