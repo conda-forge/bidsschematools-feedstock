@@ -21,16 +21,12 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools
+    - pdm
   run:
     - python >={{ python_min }}
     - click
     - pyyaml
-    - jsonschema
-    - tabulate
-    - pandas
-    - pyparsing
-    - markdown-it-py
+    - acres
 
 test:
   requires:
