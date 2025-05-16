@@ -21,7 +21,9 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - pdm
+    - pdm-backend
+    - acres
+    - pyyaml
   run:
     - python >={{ python_min }}
     - click
