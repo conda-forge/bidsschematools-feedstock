@@ -1,5 +1,5 @@
 {% set name = "bidsschematools" %}
-{% set version = "1.0.5" %}
+{% set version = "1.0.8" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2ca4adc4287b4d8eeb4b1e93f449cf26a08dc6e8f9747be52ba13e9bc0f6d411
+  sha256: c67800fb9e5ada8e692bd397c222724eb241eea2a6ff3ab4fb1ed1e473f0b074
 
 build:
   noarch: python
@@ -21,22 +21,20 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools
+    - pdm-backend
+    - acres
+    - pyyaml
   run:
     - python >={{ python_min }}
     - click
     - pyyaml
-    - jsonschema
-    - tabulate
-    - pandas
-    - pyparsing
-    - markdown-it-py
+    - acres
 
 test:
   requires:
     - python {{ python_min }}
     - pip
-    - pytest
+    - jq
   source_files:
     - pyproject.toml
   imports:
@@ -44,6 +42,8 @@ test:
   commands:
     - pip check
     - bst --help
+    - bst export | jq '[.bids_version, .schema_version]'
+    - pip install "bidsschematools[tests]"
     - python -m pytest -vv --pyargs bidsschematools
 
 about:
