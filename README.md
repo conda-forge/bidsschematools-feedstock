@@ -147,6 +147,5 @@ Feedstock Maintainers
 
 * [@TheChymera](https://github.com/TheChymera/)
 * [@effigies](https://github.com/effigies/)
-* [@jwodder](https://github.com/jwodder/)
 * [@yarikoptic](https://github.com/yarikoptic/)
 
