@@ -1,5 +1,5 @@
 {% set name = "bidsschematools" %}
-{% set version = "1.1.1" %}
+{% set version = "1.1.2" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 72e73bde5cb4d6f1dd048dc6fa94d4d778cc0e296e8f4c142d3ef85a3c16e6eb
+  sha256: 4a59689e7e8ff4a7056505fad516aa3065f557c6a43fa171ab8f02c24cb9fef8
 
 build:
   noarch: python
