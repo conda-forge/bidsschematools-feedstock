@@ -48,10 +48,10 @@ tests:
         - python ${{ python_min }}.*
         - pip
         - jq
+        - pytest
     script:
       - bst --help
       - bst export | jq '[.bids_version, .schema_version]'
-      - pip install "bidsschematools[tests]"
       - python -m pytest -vv --pyargs bidsschematools
 
 about:
