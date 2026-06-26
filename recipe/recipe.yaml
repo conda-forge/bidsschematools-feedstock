@@ -2,8 +2,8 @@ schema_version: 1
 
 context:
   name: bidsschematools
-  version: "1.2.1"
-  python_min: 3.10
+  version: "1.2.4"
+  python_min: "3.10"
 
 package:
   name: ${{ name|lower }}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: f147943812c01a61913e8306d779393e095a58b9e8fb63b48f2366662b702a80
+  sha256: d73a50484265ea1f0815626df9c5e6196f6e95756b8143ea8cf8b747e6526ac4
 
 build:
   number: 0
@@ -51,7 +51,7 @@ tests:
     script:
       - bst --help
       - bst export | jq '[.bids_version, .schema_version]'
-      - pip install "bidsschematools[tests]"
+      - pip install "bidsschematools[all]" pytest check-jsonschema
       - python -m pytest -vv --pyargs bidsschematools
 
 about:
