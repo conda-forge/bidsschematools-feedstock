@@ -51,7 +51,7 @@ tests:
     script:
       - bst --help
       - bst export | jq '[.bids_version, .schema_version]'
-      - pip install "bidsschematools[tests]"
+      - pip install "bidsschematools[all]" pytest check-jsonschema
       - python -m pytest -vv --pyargs bidsschematools
 
 about:
