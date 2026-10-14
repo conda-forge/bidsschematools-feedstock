@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: bidsschematools
-  version: "2.0.0"
+  version: "2.0.1"
   python_min: "3.10"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 9b53bd8b65146316b6b7cb0d507bcab1091ce81e509eaaf84e3cd1b2f5d41729
+  sha256: 7660ad633bfb9831dc793ccdbbddfb8c7e039e432bfd8b3e0cf7552853286d77
 
 build:
   number: 0
